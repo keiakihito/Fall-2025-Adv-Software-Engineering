@@ -31,3 +31,6 @@ Thumbs.db
 *.coverage
 *.lcov
 *.hprof
+
+# --Redundant files --
+requirement.md
