@@ -33,4 +33,4 @@ Thumbs.db
 *.hprof
 
 # --Redundant files --
-requirement.md
+requirement*.md
