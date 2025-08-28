@@ -23,3 +23,17 @@ public class Main {
         p3.use("Hello, world.");
     }
 }
+
+/*
+Sample Run
+
+Hello, world.
+-------------
+***************
+*Hello, world.*
+***************
+///////////////
+/Hello, world./
+///////////////
+
+ */

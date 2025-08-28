@@ -7,3 +7,11 @@ public class Main {
         p.printStrong();
     }
 }
+
+/*
+Sample Run 
+
+(Hello)
+*Hello*
+*/ 
+
