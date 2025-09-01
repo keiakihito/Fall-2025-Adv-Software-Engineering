@@ -84,3 +84,40 @@ public class Main {
         System.out.printf("Grand Total:         $%.2f\n", freelancerTotal + vendorTotal);
     }
 }
+
+/*
+===============================================
+       CS5800 - HW1: Payable Interface        
+===============================================
+
+1. PAYABLE ENTITIES
+===================
+Freelancer: Alice Johnson - Payment: $2625.00
+Freelancer: Bob Smith - Payment: $2850.00
+Freelancer: Carol Davis - Payment: $1600.00
+Vendor: Tech Supply Co., Invoice: INV-2024-001 - Payment: $2500.00
+Vendor: Office Materials Ltd., Invoice: INV-2024-002 - Payment: $1800.75
+Vendor: Consulting Services Inc., Invoice: INV-2024-003 - Payment: $5000.00
+
+2. TOTAL PAYOUT CALCULATION
+============================
+Total Amount to Pay: $16375.75
+
+3. POLYMORPHISM DEMONSTRATION
+==============================
+All payables are handled uniformly via Payable interface:
+Freelancer           -> Alice Johnson (Payment: $2625.00)
+Freelancer           -> Bob Smith (Payment: $2850.00)
+Freelancer           -> Carol Davis (Payment: $1600.00)
+VendorInvoice        -> Tech Supply Co. (Payment: $2500.00)
+VendorInvoice        -> Office Materials Ltd. (Payment: $1800.75)
+VendorInvoice        -> Consulting Services Inc. (Payment: $5000.00)
+
+4. PAYMENT BREAKDOWN BY TYPE
+=============================
+Freelancer Payments: 3 freelancers, Total: $7075.00
+Vendor Payments:     3 vendors, Total: $9300.75
+Grand Total:         $16375.75
+
+
+ */
