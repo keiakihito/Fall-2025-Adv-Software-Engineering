@@ -1,0 +1,4 @@
+keita@example.com= Keita Katsumi
+hanako@example.com=Hanako Sato
+tomura@example.com=Tomura
+mamoru@example.com=Mamoru Takahashi
