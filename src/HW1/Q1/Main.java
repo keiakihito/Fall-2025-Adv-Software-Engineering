@@ -1,7 +1,25 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main driver program demonstrating the Employee inheritance hierarchy.
+ * This program creates instances of different employee types, stores them in a collection,
+ * and demonstrates key object-oriented programming concepts including inheritance,
+ * polymorphism, and encapsulation.
+ * 
+ * @author CS5800 Student
+ * @version 1.0
+ * @since 2025
+ */
 public class Main {
+    
+    /**
+     * Main method that executes the employee hierarchy demonstration.
+     * Creates employees according to the assignment requirements and demonstrates
+     * various OOP concepts through structured output sections.
+     * 
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("===============================================");
         System.out.println("       CS5800 - HW1: Employee Hierarchy       ");
@@ -30,6 +48,12 @@ public class Main {
         verifyInheritance(employees);
     }
     
+    /**
+     * Creates and returns a list of employees with the test data specified in the assignment requirements.
+     * The employees include different types: SalariedEmployee, HourlyEmployee, CommissionEmployee, and BaseEmployee.
+     * 
+     * @return a List containing all employee objects with the specified test data
+     */
     private static List<Employee> createEmployees() {
         List<Employee> employees = new ArrayList<>();
         
@@ -44,6 +68,12 @@ public class Main {
         return employees;
     }
     
+    /**
+     * Displays all employees in a numbered list format.
+     * Each employee's information is shown using their toString() method.
+     * 
+     * @param employees the list of employees to display
+     */
     private static void displayAllEmployees(List<Employee> employees) {
         for (int i = 0; i < employees.size(); i++) {
             Employee emp = employees.get(i);
@@ -51,6 +81,12 @@ public class Main {
         }
     }
     
+    /**
+     * Demonstrates polymorphism by showing how different employee types
+     * can be treated uniformly as Employee objects while maintaining their specific behavior.
+     * 
+     * @param employees the list of employees to demonstrate polymorphism with
+     */
     private static void demonstratePolymorphism(List<Employee> employees) {
         System.out.println("All employees are stored in Employee[] array/list:");
         System.out.println("Each employee type responds to the same Employee interface:");
@@ -64,6 +100,12 @@ public class Main {
         }
     }
     
+    /**
+     * Analyzes and displays the distribution of different employee types in the collection.
+     * Uses instanceof to count each employee type and displays statistics.
+     * 
+     * @param employees the list of employees to analyze
+     */
     private static void analyzeEmployeeTypes(List<Employee> employees) {
         int salariedCount = 0, hourlyCount = 0, commissionCount = 0, baseCount = 0;
         
@@ -87,6 +129,13 @@ public class Main {
         System.out.printf("Total Employees:      %d\n", employees.size());
     }
     
+    /**
+     * Demonstrates encapsulation by showing how private fields are accessed
+     * only through public getter and setter methods. Tests field modification
+     * and restoration using the accessor/mutator methods.
+     * 
+     * @param employees the list of employees to demonstrate encapsulation with
+     */
     private static void demonstrateEncapsulation(List<Employee> employees) {
         System.out.println("Testing private field access through getters/setters:");
         
@@ -117,6 +166,12 @@ public class Main {
         }
     }
     
+    /**
+     * Verifies the inheritance hierarchy by checking IS-A relationships
+     * and demonstrating access to inherited methods from the base Employee class.
+     * 
+     * @param employees the list of employees to verify inheritance relationships for
+     */
     private static void verifyInheritance(List<Employee> employees) {
         System.out.println("Inheritance Verification (IS-A relationships):");
         
