@@ -1,7 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main driver program demonstrating the Payable interface implementation.
+ * This program creates instances of Freelancer and VendorInvoice classes,
+ * stores them in a collection, and demonstrates polymorphic behavior through
+ * the Payable interface. It calculates and displays total payouts while
+ * showing various object-oriented programming concepts.
+ * 
+ * @author CS5800 Student
+ * @version 1.0
+ * @since 2025
+ */
 public class Main {
+    
+    /**
+     * Main method that executes the payable interface demonstration.
+     * Creates payable objects, processes payments, and displays results
+     * including total payouts and polymorphic behavior demonstration.
+     * 
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("===============================================");
         System.out.println("       CS5800 - HW1: Payable Interface        ");
@@ -36,6 +55,13 @@ public class Main {
         analyzePaymentTypes(payables);
     }
     
+    /**
+     * Creates and returns a list of payable entities with test data.
+     * The list includes both Freelancer and VendorInvoice objects
+     * to demonstrate polymorphic behavior.
+     * 
+     * @return a List containing Freelancer and VendorInvoice objects
+     */
     private static List<Payable> createPayables() {
         List<Payable> payables = new ArrayList<>();
         
@@ -50,6 +76,13 @@ public class Main {
         return payables;
     }
     
+    /**
+     * Demonstrates polymorphism by treating different payable types uniformly.
+     * Shows how Freelancer and VendorInvoice objects can be handled through
+     * the common Payable interface while maintaining their specific behaviors.
+     * 
+     * @param payables the list of payable entities to demonstrate polymorphism with
+     */
     private static void demonstratePolymorphism(List<Payable> payables) {
         System.out.println("All payables are handled uniformly via Payable interface:");
         
@@ -61,6 +94,13 @@ public class Main {
         }
     }
     
+    /**
+     * Analyzes and displays payment statistics by type.
+     * Separates freelancer and vendor payments, showing counts and totals
+     * for each category as well as the grand total.
+     * 
+     * @param payables the list of payable entities to analyze
+     */
     private static void analyzePaymentTypes(List<Payable> payables) {
         double freelancerTotal = 0.0;
         double vendorTotal = 0.0;
