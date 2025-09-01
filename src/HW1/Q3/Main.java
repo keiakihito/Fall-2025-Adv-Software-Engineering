@@ -1,4 +1,27 @@
+/**
+ * Main driver program demonstrating ship inheritance and polymorphism.
+ * This program creates a static array of Ship objects containing different ship types
+ * and demonstrates polymorphic behavior through method overriding and dynamic dispatch.
+ * 
+ * The program showcases:
+ * - Inheritance hierarchy (Ship -> CruiseShip, CargoShip)
+ * - Polymorphism through overridden print() methods
+ * - Dynamic method dispatch at runtime
+ * - Encapsulation with private attributes
+ * 
+ * @author CS5800 Student
+ * @version 1.0
+ * @since 2025
+ */
 public class Main {
+    
+    /**
+     * Main method that demonstrates ship inheritance and polymorphism.
+     * Creates a static array of Ship objects, populates it with different ship types,
+     * and uses a loop to call print() on each object, demonstrating dynamic method dispatch.
+     * 
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("===============================================");
         System.out.println("       CS5800 - HW1: Ship Inheritance         ");
