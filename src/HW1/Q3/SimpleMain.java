@@ -5,7 +5,7 @@
  * 2. Populates with one Ship, one CruiseShip, one CargoShip
  * 3. Uses a loop to call print() on each object (demonstrates polymorphism)
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

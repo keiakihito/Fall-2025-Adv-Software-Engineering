@@ -2,7 +2,7 @@
  * Represents a base Employee with fundamental employee information.
  * This class serves as the parent class for all employee types in the inheritance hierarchy.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

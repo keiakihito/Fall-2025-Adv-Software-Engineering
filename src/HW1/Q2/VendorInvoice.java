@@ -3,7 +3,7 @@
  * This class implements the Payable interface and represents payments to vendors
  * for services or goods provided.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

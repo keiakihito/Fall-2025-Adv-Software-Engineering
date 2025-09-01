@@ -2,7 +2,7 @@
  * Represents an hourly employee who is paid based on an hourly wage and hours worked.
  * This class extends the Employee base class and adds wage and hours-specific functionality.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

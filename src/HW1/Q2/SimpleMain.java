@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class SimpleMain {
     public static void main(String[] args) {
-        System.out.println("CS5800 - HW1 Q2: Payable Interface Implementation");
+        System.out.println("Adv. Software Engineering Fall 2025 - HW1 Q2: Payable Interface Implementation");
         System.out.println("=================================================\n");
         
         // 1. Create ArrayList<Payable>

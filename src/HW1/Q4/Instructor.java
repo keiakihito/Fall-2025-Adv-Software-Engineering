@@ -3,7 +3,7 @@
  * This class is used in an aggregation relationship with the Course class,
  * demonstrating the "HAS-A" relationship pattern.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

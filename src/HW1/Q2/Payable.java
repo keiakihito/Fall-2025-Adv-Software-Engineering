@@ -3,7 +3,7 @@
  * This interface defines the contract for calculating payment amounts and identifying payees.
  * It enables polymorphic treatment of different payable entities such as freelancers and vendors.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

@@ -3,7 +3,7 @@
  * This class implements the Payable interface and includes overtime calculation
  * for hours worked beyond 40 hours per period.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

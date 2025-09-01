@@ -2,7 +2,7 @@
  * Represents a commission employee who earns money based on a percentage of their sales.
  * This class extends the Employee base class and adds commission rate and gross sales functionality.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

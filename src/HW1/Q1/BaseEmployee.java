@@ -2,7 +2,7 @@
  * Represents a base employee who receives a fixed annual base salary.
  * This class extends the Employee base class and adds base salary functionality.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

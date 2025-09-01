@@ -7,7 +7,7 @@ import java.util.List;
  * and demonstrates key object-oriented programming concepts including inheritance,
  * polymorphism, and encapsulation.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */
@@ -22,7 +22,7 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("===============================================");
-        System.out.println("       CS5800 - HW1: Employee Hierarchy       ");
+        System.out.println("       Adv. Software Engineering Fall 2025 - HW1: Employee Hierarchy       ");
         System.out.println("===============================================\n");
         
         List<Employee> employees = createEmployees();
@@ -193,7 +193,7 @@ public class Main {
 Sample Run
 
 ===============================================
-       CS5800 - HW1: Employee Hierarchy       
+       Adv. Software Engineering Fall 2025 - HW1: Employee Hierarchy       
 ===============================================
 
 1. EMPLOYEE ROSTER

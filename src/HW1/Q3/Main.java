@@ -9,7 +9,7 @@
  * - Dynamic method dispatch at runtime
  * - Encapsulation with private attributes
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */
@@ -24,7 +24,7 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("===============================================");
-        System.out.println("       CS5800 - HW1: Ship Inheritance         ");
+        System.out.println("       Adv. Software Engineering Fall 2025 - HW1: Ship Inheritance         ");
         System.out.println("===============================================\n");
         
         // 1. Create a static array of Ship objects of size 3

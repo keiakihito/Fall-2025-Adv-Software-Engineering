@@ -8,7 +8,7 @@ import java.util.List;
  * the Payable interface. It calculates and displays total payouts while
  * showing various object-oriented programming concepts.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */
@@ -23,7 +23,7 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("===============================================");
-        System.out.println("       CS5800 - HW1: Payable Interface        ");
+        System.out.println("       Adv. Software Engineering Fall 2025 - HW1: Payable Interface        ");
         System.out.println("===============================================\n");
         
         List<Payable> payables = createPayables();
@@ -127,7 +127,7 @@ public class Main {
 
 /*
 ===============================================
-       CS5800 - HW1: Payable Interface        
+       Adv. Software Engineering Fall 2025 - HW1: Payable Interface        
 ===============================================
 
 1. PAYABLE ENTITIES

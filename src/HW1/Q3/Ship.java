@@ -3,7 +3,7 @@
  * This class serves as the base class for all ship types in the inheritance hierarchy,
  * providing common attributes and methods that can be inherited and overridden.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

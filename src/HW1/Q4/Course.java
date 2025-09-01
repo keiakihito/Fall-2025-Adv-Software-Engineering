@@ -3,7 +3,7 @@
  * This class implements the "HAS-A" relationship pattern, where a Course has Instructor(s) and Textbook(s).
  * The class supports both single and multiple instructor/textbook configurations.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

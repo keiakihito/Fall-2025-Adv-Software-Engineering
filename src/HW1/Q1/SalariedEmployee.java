@@ -2,7 +2,7 @@
  * Represents a salaried employee who receives a fixed weekly salary.
  * This class extends the Employee base class and adds salary-specific functionality.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

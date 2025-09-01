@@ -3,7 +3,7 @@
  * This class extends the Ship base class and adds passenger capacity functionality.
  * The print() method is overridden to display passenger information instead of year built.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */

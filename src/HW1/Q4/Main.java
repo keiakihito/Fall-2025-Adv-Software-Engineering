@@ -1,9 +1,9 @@
 /**
- * Main driver class for CS5800 HW1 Q4 - Aggregation ("HAS-A" Relationship) demonstration.
+ * Main driver class for Adv. Software Engineering Fall 2025 HW1 Q4 - Aggregation ("HAS-A" Relationship) demonstration.
  * This program demonstrates aggregation relationships between Course, Instructor, and Textbook classes.
  * It shows both single and multiple object aggregation scenarios.
  * 
- * @author CS5800 Student
+ * @author kkatsumi
  * @version 1.0
  * @since 2025
  */
@@ -15,7 +15,7 @@ public class Main {
      * @param args command line arguments (not used)
      */
     public static void main(String[] args) {
-        System.out.println("CS5800 HW1 Q4 - Aggregation (\"HAS-A\" Relationship)");
+        System.out.println("Adv. Software Engineering Fall 2025 HW1 Q4 - Aggregation (\"HAS-A\" Relationship)");
         System.out.println("====================================================\n");
         
         // Part 1: Create and display a Course with single Instructor and Textbook
@@ -51,3 +51,28 @@ public class Main {
         System.out.println("Both single and multiple aggregation relationships shown.");
     }
 }
+
+/*
+ Adv. Software Engineering Fall 2025 HW1 Q4 - Aggregation ("HAS-A" Relationship)
+====================================================
+
+Part 1: Course with Single Instructor and Textbook
+---------------------------------------------------
+Course: Advanced Software Engineering
+Instructor: Nima Davarpanah
+Textbook: Clean Code by Robert C. Martin
+
+Part 2: Course with Multiple Instructors and Textbooks
+------------------------------------------------------
+Course: Advanced Software Engineering
+Instructors:
+  - Nima Davarpanah
+  - Jane Smith
+Textbooks:
+  - Clean Code by Robert C. Martin
+  - Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma
+
+============================================================
+Demonstration completed successfully!
+Both single and multiple aggregation relationships shown.
+ */
