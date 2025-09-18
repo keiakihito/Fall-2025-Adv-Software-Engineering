@@ -1,0 +1,223 @@
+@startuml HW1_Comprehensive_UML_Diagrams
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+skinparam packageStyle rectangle
+
+' ==============================================================================
+' Q1: Employee Inheritance Hierarchy (IS-A Relationships)
+' ==============================================================================
+package "Q1: Employee Inheritance Hierarchy" {
+
+    class Employee {
+        - firstName: String
+        - lastName: String
+        - socialSecurityNumber: String
+        + Employee(firstName: String, lastName: String, socialSecurityNumber: String)
+        + getFirstName(): String
+        + setFirstName(firstName: String): void
+        + getLastName(): String
+        + setLastName(lastName: String): void
+        + getSocialSecurityNumber(): String
+        + setSocialSecurityNumber(socialSecurityNumber: String): void
+        + toString(): String
+    }
+
+    class SalariedEmployee {
+        - weeklySalary: double
+        + SalariedEmployee(firstName: String, lastName: String, socialSecurityNumber: String, weeklySalary: double)
+        + getWeeklySalary(): double
+        + setWeeklySalary(weeklySalary: double): void
+        + toString(): String
+    }
+
+    class HourlyEmployee {
+        - wage: double
+        - hoursWorked: int
+        + HourlyEmployee(firstName: String, lastName: String, socialSecurityNumber: String, wage: double, hoursWorked: int)
+        + getWage(): double
+        + setWage(wage: double): void
+        + getHoursWorked(): int
+        + setHoursWorked(hoursWorked: int): void
+        + toString(): String
+    }
+
+    class CommissionEmployee {
+        - commissionRate: double
+        - grossSales: double
+        + CommissionEmployee(firstName: String, lastName: String, socialSecurityNumber: String, commissionRate: double, grossSales: double)
+        + getCommissionRate(): double
+        + setCommissionRate(commissionRate: double): void
+        + getGrossSales(): double
+        + setGrossSales(grossSales: double): void
+        + toString(): String
+    }
+
+    class BaseEmployee {
+        - baseSalary: double
+        + BaseEmployee(firstName: String, lastName: String, socialSecurityNumber: String, baseSalary: double)
+        + getBaseSalary(): double
+        + setBaseSalary(baseSalary: double): void
+        + toString(): String
+    }
+
+    ' Inheritance relationships
+    Employee <|-- SalariedEmployee : extends
+    Employee <|-- HourlyEmployee : extends
+    Employee <|-- CommissionEmployee : extends
+    Employee <|-- BaseEmployee : extends
+}
+
+' ==============================================================================
+' Q2: Payable Interface Implementation
+' ==============================================================================
+package "Q2: Payable Interface Implementation" {
+
+    interface Payable {
+        + calculatePayment(): double
+        + getPayeeName(): String
+    }
+
+    class Freelancer {
+        - firstName: String
+        - lastName: String
+        - hourlyRate: double
+        - hoursWorked: double
+        + Freelancer(firstName: String, lastName: String, hourlyRate: double, hoursWorked: double)
+        + getFirstName(): String
+        + setFirstName(firstName: String): void
+        + getLastName(): String
+        + setLastName(lastName: String): void
+        + getHourlyRate(): double
+        + setHourlyRate(hourlyRate: double): void
+        + getHoursWorked(): double
+        + setHoursWorked(hoursWorked: double): void
+        + calculatePayment(): double
+        + getPayeeName(): String
+        + print(): void
+    }
+
+    class VendorInvoice {
+        - vendorName: String
+        - invoiceNumber: String
+        - amountDue: double
+        + VendorInvoice(vendorName: String, invoiceNumber: String, amountDue: double)
+        + getVendorName(): String
+        + setVendorName(vendorName: String): void
+        + getInvoiceNumber(): String
+        + setInvoiceNumber(invoiceNumber: String): void
+        + getAmountDue(): double
+        + setAmountDue(amountDue: double): void
+        + calculatePayment(): double
+        + getPayeeName(): String
+        + print(): void
+    }
+
+    ' Interface implementation relationships
+    Payable <|.. Freelancer : implements
+    Payable <|.. VendorInvoice : implements
+}
+
+' ==============================================================================
+' Q3: Ship Inheritance Hierarchy
+' ==============================================================================
+package "Q3: Ship Inheritance Hierarchy" {
+
+    class Ship {
+        - shipName: String
+        - yearBuilt: String
+        + Ship(shipName: String, yearBuilt: String)
+        + getShipName(): String
+        + setShipName(shipName: String): void
+        + getYearBuilt(): String
+        + setYearBuilt(yearBuilt: String): void
+        + print(): void
+    }
+
+    class CruiseShip {
+        - maxPassengers: int
+        + CruiseShip(shipName: String, yearBuilt: String, maxPassengers: int)
+        + getMaxPassengers(): int
+        + setMaxPassengers(maxPassengers: int): void
+        + print(): void
+    }
+
+    class CargoShip {
+        - cargoCapacity: int
+        + CargoShip(shipName: String, yearBuilt: String, cargoCapacity: int)
+        + getCargoCapacity(): int
+        + setCargoCapacity(cargoCapacity: int): void
+        + print(): void
+    }
+
+    ' Inheritance relationships
+    Ship <|-- CruiseShip : extends
+    Ship <|-- CargoShip : extends
+}
+
+' ==============================================================================
+' Q4: Course Aggregation (HAS-A Relationships)
+' ==============================================================================
+package "Q4: Course Aggregation (HAS-A)" {
+
+    class Course {
+        - courseName: String
+        - instructor: Instructor
+        - textbook: Textbook
+        - instructors: Instructor[]
+        - textbooks: Textbook[]
+        + Course(courseName: String, instructor: Instructor, textbook: Textbook)
+        + Course(courseName: String, instructors: Instructor[], textbooks: Textbook[])
+        + getCourseName(): String
+        + setCourseName(courseName: String): void
+        + getInstructor(): Instructor
+        + setInstructor(instructor: Instructor): void
+        + getTextbook(): Textbook
+        + setTextbook(textbook: Textbook): void
+        + getInstructors(): Instructor[]
+        + setInstructors(instructors: Instructor[]): void
+        + getTextbooks(): Textbook[]
+        + setTextbooks(textbooks: Textbook[]): void
+        + print(): void
+    }
+
+    class Instructor {
+        - firstName: String
+        - lastName: String
+        - officeNumber: String
+        + Instructor(firstName: String, lastName: String, officeNumber: String)
+        + getFirstName(): String
+        + setFirstName(firstName: String): void
+        + getLastName(): String
+        + setLastName(lastName: String): void
+        + getOfficeNumber(): String
+        + setOfficeNumber(officeNumber: String): void
+    }
+
+    class Textbook {
+        - title: String
+        - author: String
+        - publisher: String
+        + Textbook(title: String, author: String, publisher: String)
+        + getTitle(): String
+        + setTitle(title: String): void
+        + getAuthor(): String
+        + setAuthor(author: String): void
+        + getPublisher(): String
+        + setPublisher(publisher: String): void
+    }
+
+    ' Aggregation relationships (HAS-A)
+    Course o-- Instructor : has 1 or many
+    Course o-- Textbook : has 1 or many
+}
+
+' ==============================================================================
+' Layout and Styling Notes
+' ==============================================================================
+note top of Employee : Base class for all employee types\nDemonstrates inheritance (IS-A relationship)
+note top of Payable : Interface defining payment contract\nEnables polymorphic treatment
+note top of Ship : Base ship class with overrideable print() method\nDemonstrates polymorphism through method overriding
+note top of Course : Demonstrates aggregation (HAS-A relationship)\nSupports both single and multiple instructors/textbooks
+
+@enduml

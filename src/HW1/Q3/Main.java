@@ -71,3 +71,33 @@ public class Main {
                          cargo.getCargoCapacity());
     }
 }
+
+/*
+ ===============================================
+       Adv. Software Engineering Fall 2025 - HW1: Ship Inheritance         
+===============================================
+
+POLYMORPHISM DEMONSTRATION
+===========================
+Static array contains different ship types, all referenced as Ship objects:
+ships[0] (Ship): Ship name: Titanic, Year built: 1912
+ships[1] (CruiseShip): Ship name: Royal Caribbean, Maximum passengers: 5000
+ships[2] (CargoShip): Ship name: Ever Given, Cargo capacity: 20000 tonnage
+
+DYNAMIC METHOD DISPATCH EXPLANATION
+====================================
+Even though all objects are referenced as 'Ship' in the array:
+- ships[0].print() calls Ship's print() method (shows name and year)
+- ships[1].print() calls CruiseShip's print() method (shows name and passengers)
+- ships[2].print() calls CargoShip's print() method (shows name and cargo capacity)
+
+This demonstrates POLYMORPHISM through dynamic method dispatch!
+
+ADDITIONAL DEMONSTRATIONS
+=========================
+Inheritance demonstration:
+CruiseShip accessing inherited method: Royal Caribbean built in 2020
+CruiseShip specific method: 5000 maximum passengers
+CargoShip accessing inherited method: Ever Given built in 2018
+CargoShip specific method: 20000 tonnage cargo capacity
+ */

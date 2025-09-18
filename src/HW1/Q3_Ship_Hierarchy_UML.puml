@@ -1,0 +1,50 @@
+@startuml Q3_Ship_Inheritance_Hierarchy
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+title Q3: Ship Inheritance Hierarchy (Method Overriding & Polymorphism)
+
+class Ship {
+    - shipName: String
+    - yearBuilt: String
+    --
+    + Ship(shipName: String, yearBuilt: String)
+    --
+    + getShipName(): String
+    + setShipName(shipName: String): void
+    + getYearBuilt(): String
+    + setYearBuilt(yearBuilt: String): void
+    + print(): void
+}
+
+class CruiseShip {
+    - maxPassengers: int
+    --
+    + CruiseShip(shipName: String, yearBuilt: String, maxPassengers: int)
+    --
+    + getMaxPassengers(): int
+    + setMaxPassengers(maxPassengers: int): void
+    + print(): void
+}
+
+class CargoShip {
+    - cargoCapacity: int
+    --
+    + CargoShip(shipName: String, yearBuilt: String, cargoCapacity: int)
+    --
+    + getCargoCapacity(): int
+    + setCargoCapacity(cargoCapacity: int): void
+    + print(): void
+}
+
+' Inheritance relationships
+Ship <|-- CruiseShip
+Ship <|-- CargoShip
+
+note top of Ship : Base ship class\nprint() displays name and year built
+note right of CruiseShip : Overrides print() to show:\nship name + max passengers\n(hides year built)
+note right of CargoShip : Overrides print() to show:\nship name + cargo capacity\n(hides year built)
+
+note bottom : Demonstrates polymorphism:\nShip[] array can hold different ship types\nCorrect print() method called at runtime
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml Q2_Payable_Interface_Implementation
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+title Q2: Payable Interface Implementation (Polymorphism)
+
+interface Payable {
+    + calculatePayment(): double
+    + getPayeeName(): String
+}
+
+class Freelancer {
+    - firstName: String
+    - lastName: String
+    - hourlyRate: double
+    - hoursWorked: double
+    --
+    + Freelancer(firstName: String, lastName: String, hourlyRate: double, hoursWorked: double)
+    --
+    + getFirstName(): String
+    + setFirstName(firstName: String): void
+    + getLastName(): String
+    + setLastName(lastName: String): void
+    + getHourlyRate(): double
+    + setHourlyRate(hourlyRate: double): void
+    + getHoursWorked(): double
+    + setHoursWorked(hoursWorked: double): void
+    + calculatePayment(): double
+    + getPayeeName(): String
+    + print(): void
+}
+
+class VendorInvoice {
+    - vendorName: String
+    - invoiceNumber: String
+    - amountDue: double
+    --
+    + VendorInvoice(vendorName: String, invoiceNumber: String, amountDue: double)
+    --
+    + getVendorName(): String
+    + setVendorName(vendorName: String): void
+    + getInvoiceNumber(): String
+    + setInvoiceNumber(invoiceNumber: String): void
+    + getAmountDue(): double
+    + setAmountDue(amountDue: double): void
+    + calculatePayment(): double
+    + getPayeeName(): String
+    + print(): void
+}
+
+' Interface implementation relationships
+Payable <|.. Freelancer : implements
+Payable <|.. VendorInvoice : implements
+
+note top of Payable : Interface defining payment contract\nEnables polymorphic treatment of different payable entities
+note bottom of Freelancer : Payment = hourlyRate × hoursWorked\n(with 1.5× overtime for hours > 40)
+note bottom of VendorInvoice : Payment = amountDue\n(fixed invoice amount)
+
+@enduml

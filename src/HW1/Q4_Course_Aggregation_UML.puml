@@ -1,0 +1,70 @@
+@startuml Q4_Course_Aggregation_HAS_A
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+title Q4: Course Aggregation (HAS-A Relationships)
+
+class Course {
+    - courseName: String
+    - instructor: Instructor
+    - textbook: Textbook
+    - instructors: Instructor[]
+    - textbooks: Textbook[]
+    --
+    + Course(courseName: String, instructor: Instructor, textbook: Textbook)
+    + Course(courseName: String, instructors: Instructor[], textbooks: Textbook[])
+    --
+    + getCourseName(): String
+    + setCourseName(courseName: String): void
+    + getInstructor(): Instructor
+    + setInstructor(instructor: Instructor): void
+    + getTextbook(): Textbook
+    + setTextbook(textbook: Textbook): void
+    + getInstructors(): Instructor[]
+    + setInstructors(instructors: Instructor[]): void
+    + getTextbooks(): Textbook[]
+    + setTextbooks(textbooks: Textbook[]): void
+    + print(): void
+}
+
+class Instructor {
+    - firstName: String
+    - lastName: String
+    - officeNumber: String
+    --
+    + Instructor(firstName: String, lastName: String, officeNumber: String)
+    --
+    + getFirstName(): String
+    + setFirstName(firstName: String): void
+    + getLastName(): String
+    + setLastName(lastName: String): void
+    + getOfficeNumber(): String
+    + setOfficeNumber(officeNumber: String): void
+}
+
+class Textbook {
+    - title: String
+    - author: String
+    - publisher: String
+    --
+    + Textbook(title: String, author: String, publisher: String)
+    --
+    + getTitle(): String
+    + setTitle(title: String): void
+    + getAuthor(): String
+    + setAuthor(author: String): void
+    + getPublisher(): String
+    + setPublisher(publisher: String): void
+}
+
+' Aggregation relationships (HAS-A)
+Course o-- Instructor : has 1 or many
+Course o-- Textbook : has 1 or many
+
+note top of Course : Demonstrates aggregation (HAS-A relationship)\nSupports both single and multiple instructors/textbooks\nInstructor and Textbook objects exist independently
+note right of Instructor : Independent object\nCan exist without Course
+note right of Textbook : Independent object\nCan exist without Course
+
+note bottom : Aggregation vs Composition:\n• Aggregation: "HAS-A" relationship where parts can exist independently\n• Course HAS Instructor(s) and Textbook(s)\n• Objects can be shared between courses
+
+@enduml

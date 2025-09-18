@@ -1,0 +1,81 @@
+@startuml Q1_Employee_Inheritance_Hierarchy
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+title Q1: Employee Inheritance Hierarchy (IS-A Relationships)
+
+class Employee {
+    - firstName: String
+    - lastName: String
+    - socialSecurityNumber: String
+    --
+    + Employee(firstName: String, lastName: String, socialSecurityNumber: String)
+    --
+    + getFirstName(): String
+    + setFirstName(firstName: String): void
+    + getLastName(): String
+    + setLastName(lastName: String): void
+    + getSocialSecurityNumber(): String
+    + setSocialSecurityNumber(socialSecurityNumber: String): void
+    + toString(): String
+}
+
+class SalariedEmployee {
+    - weeklySalary: double
+    --
+    + SalariedEmployee(firstName: String, lastName: String, socialSecurityNumber: String, weeklySalary: double)
+    --
+    + getWeeklySalary(): double
+    + setWeeklySalary(weeklySalary: double): void
+    + toString(): String
+}
+
+class HourlyEmployee {
+    - wage: double
+    - hoursWorked: int
+    --
+    + HourlyEmployee(firstName: String, lastName: String, socialSecurityNumber: String, wage: double, hoursWorked: int)
+    --
+    + getWage(): double
+    + setWage(wage: double): void
+    + getHoursWorked(): int
+    + setHoursWorked(hoursWorked: int): void
+    + toString(): String
+}
+
+class CommissionEmployee {
+    - commissionRate: double
+    - grossSales: double
+    --
+    + CommissionEmployee(firstName: String, lastName: String, socialSecurityNumber: String, commissionRate: double, grossSales: double)
+    --
+    + getCommissionRate(): double
+    + setCommissionRate(commissionRate: double): void
+    + getGrossSales(): double
+    + setGrossSales(grossSales: double): void
+    + toString(): String
+}
+
+class BaseEmployee {
+    - baseSalary: double
+    --
+    + BaseEmployee(firstName: String, lastName: String, socialSecurityNumber: String, baseSalary: double)
+    --
+    + getBaseSalary(): double
+    + setBaseSalary(baseSalary: double): void
+    + toString(): String
+}
+
+' Inheritance relationships
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommissionEmployee
+Employee <|-- BaseEmployee
+
+note top of Employee : Base class containing common employee attributes\nAll employee types inherit from this class
+note right of SalariedEmployee : Fixed weekly salary
+note right of HourlyEmployee : Paid by hour with hours worked
+note right of CommissionEmployee : Paid by commission rate and sales
+note right of BaseEmployee : Fixed annual base salary
+
+@enduml
